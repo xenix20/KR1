@@ -1,0 +1,43 @@
+<html>
+<body>
+<h1>Список задач</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Сложность</th>
+        <th>Описание</th>
+        <th>Когда</th>
+        <th>Номер проекта</th>
+    </tr>
+
+
+    {% for a in data %}
+        <tr>
+            <td>{{ a.0 }}</td>
+            <td>{{ a.1 }}</td>
+            <td>{{ a.2 }}/5</td>
+            <td>{{ a.3 }}</td>
+            <td>{{ a.4 }}</td>
+            <td>{{ a.5 }}</td>
+        </tr>
+    {% endfor %}
+
+
+
+</table>
+</body>
+<a href="/">
+    назад домой ребята
+</a>
+</html>
+
+<style>
+    th {
+        padding: 8px !important;
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+}
+</style>
